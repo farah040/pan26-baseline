@@ -24,9 +24,9 @@ jobs:
       - name: Install required python packages
         run: |
           python -m pip install --upgrade pip
-          pip3 install tira==0.0.160 pyyaml
+          pip3 install tira==0.0.160 
       - name: Build, test, and upload image
         run: |
           tira-cli login --token ${{ secrets.TIRA_CLIENT_TOKEN }}
           tira-cli verify-installation
-          tira-cli code-submission --path . --task pan26-generated-plagiarism-detection --dataset generated-plagiarism-detection-20260315-training --docker-tag pan26-baseline --command "python3 /baseline.py --dataset $inputDataset --index /tmp/indexes --output $outputDir"
+          tira-cli code-submission --path . --task pan26-generated-plagiarism-detection --dataset generated-plagiarism-detection-20260315-training 
