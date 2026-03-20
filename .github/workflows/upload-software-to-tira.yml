@@ -24,10 +24,9 @@ jobs:
       - name: Install required python packages
         run: |
           python -m pip install --upgrade pip
-          pip3 install tira==0.0.150 pyyaml
+          pip3 install tira
       - name: Build, test, and upload image
         run: |
           tira-cli login --token ${{ secrets.TIRA_CLIENT_TOKEN }}
           tira-cli verify-installation
-          tira-cli code-submission --help
           tira-cli code-submission --path ${{ inputs.directory }} --task pan26-generated-plagiarism-detection --dataset generated-plagiarism-detection-20260315-training
