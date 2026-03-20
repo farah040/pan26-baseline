@@ -29,4 +29,4 @@ jobs:
         run: |
           tira-cli login --token ${{ secrets.TIRA_CLIENT_TOKEN }}
           tira-cli verify-installation
-          tira-cli code-submission --path . --task pan26-generated-plagiarism-detection --dataset generated-plagiarism-detection-20260315-training --set format=run.txt --command 'python3 /baseline.py --dataset $inputDataset --index /tmp/indexes --output $outputDir'
+          tira-cli code-submission --path . --task pan26-generated-plagiarism-detection --dataset generated-plagiarism-detection-20260315-training --command 'python3 /baseline.py --dataset $inputDataset --index /tmp/indexes --output $outputDir'
