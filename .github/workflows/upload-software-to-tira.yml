@@ -29,5 +29,4 @@ jobs:
         run: |
           tira-cli login --token ${{ secrets.TIRA_CLIENT_TOKEN }}
           tira-cli verify-installation
-          tira-cli code-submission --path ${{ inputs.directory }} --task pan26-generated-plagiarism-detection --dataset pan26-generated-plagiarism-detection/generated-plagiarism-detection-20260315-training
-
+          tira-cli code-submission --path ${{ inputs.directory }} --task pan26-generated-plagiarism-detection --dataset pan26-generated-plagiarism-detection/spot-check-dataset-20260227-training
