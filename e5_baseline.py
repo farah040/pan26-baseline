@@ -6,9 +6,6 @@ import faiss
 import click
 import nltk
 
-nltk.download("punkt", quiet=True)
-nltk.download("punkt_tab", quiet=True)
-
 from pathlib import Path
 from nltk.tokenize import sent_tokenize
 from sentence_transformers import SentenceTransformer
