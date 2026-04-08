@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import os
+os.environ["HF_HOME"] = "/app/huggingface"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
+
 import gzip
 import json
 import numpy as np
